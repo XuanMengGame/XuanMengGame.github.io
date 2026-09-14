@@ -9,7 +9,7 @@
  "test": {
   "updateId": "v1.4.12",
   "apkVersionCode": 152,
-  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main",
+  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.12.zip",
   "force": true,
   "notice": "v1.4.12 检查更新HTTP兜底。"
  }
