@@ -7,10 +7,10 @@
   "notice": "v1.4.7 修复：更新下载失败与闪退问题。"
  },
  "test": {
-  "updateId": "v1.4.14",
-  "apkVersionCode": 154,
-  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.14.zip",
+  "updateId": "v1.4.15",
+  "apkVersionCode": 155,
+  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.15.zip",
   "force": true,
-  "notice": "v1.4.14 下载进度排队播报；不再播解压/下载完成。"
+  "notice": "v1.4.15 修复：切开发服重启丢失（通道独立文件存储）。"
  }
 }
