@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玄盟风云 - 语音修仙武侠网游官网</title>
+<meta name="description" content="玄盟风云：一款全程语音播报、读屏无障碍适配的修仙武侠文字网游。云端存档不丢数据，轻量安装秒开。下载安卓版 APK。">
+<meta name="theme-color" content="#0d0f14">
+<style>
+  :root {
+    --ink: #0d0f14;
+    --ink-2: #171a21;
+    --ink-3: #20242e;
+    --paper: #e9e2d3;
+    --paper-dim: #b8b0a0;
+    --cinnabar: #c2412b;
+    --cinnabar-hi: #e05036;
+    --gold: #c9a86a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    line-height: 1.8;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .serif {
+    font-family: "Noto Serif SC", "SimSun", "Songti SC", serif;
+    font-weight: 700;
+  }
+  a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover, a:focus { color: var(--cinnabar-hi); }
+  :focus-visible { outline: 3px solid var(--cinnabar-hi); outline-offset: 2px; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== 顶部导航 ===== */
+  header.site-nav {
+    border-bottom: 1px solid rgba(201,168,106,.25);
+    background: rgba(13,15,20,.95);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .site-nav .wrap { display: flex; align-items: center; gap: 18px; min-height: 64px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: "Noto Serif SC", "SimSun", serif; font-weight: 900; font-size: 20px; letter-spacing: 2px; }
+  .seal {
+    width: 34px; height: 34px; flex: 0 0 34px; border-radius: 4px;
+    background: var(--cinnabar); color: #f5ece0;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: "Noto Serif SC", "SimSun", serif; font-weight: 900; font-size: 20px;
+    box-shadow: inset 0 0 0 2px rgba(245,236,224,.5);
+  }
+  .nav-links { display: flex; gap: 22px; margin-left: auto; flex-wrap: wrap; }
+  .nav-links a { color: var(--paper-dim); text-decoration: none; font-size: 15px; padding: 6px 2px; }
+  .nav-links a:hover, .nav-links a:focus { color: var(--paper); }
+
+  /* ===== Hero ===== */
+  .hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 0%, rgba(194,65,43,.10), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 85% 30%, rgba(201,168,106,.08), transparent 55%),
+      linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+    padding: 72px 0 64px;
+    border-bottom: 1px solid rgba(201,168,106,.18);
+  }
+  .hero .seal-lg {
+    width: 64px; height: 64px; border-radius: 8px;
+    background: var(--cinnabar); color: #f5ece0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Noto Serif SC", "SimSun", serif; font-weight: 900; font-size: 38px;
+    box-shadow: inset 0 0 0 3px rgba(245,236,224,.55), 0 6px 24px rgba(194,65,43,.35);
+    margin-bottom: 24px;
+  }
+  .hero h1 { font-size: clamp(40px, 8vw, 64px); letter-spacing: 6px; line-height: 1.25; }
+  .hero .sub { margin-top: 10px; font-size: clamp(16px, 2.6vw, 20px); color: var(--gold); letter-spacing: 2px; }
+  .hero .tagline { margin-top: 20px; max-width: 620px; color: var(--paper-dim); font-size: 16px; }
+  .hero .meta { margin-top: 14px; color: var(--paper-dim); font-size: 14px; }
+
+  .dl-bar { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 30px; border-radius: 6px;
+    font-size: 18px; font-weight: 700; text-decoration: none;
+    transition: background .18s ease, transform .12s ease;
+    min-height: 56px;
+  }
+  .btn:focus-visible { outline: 3px solid var(--gold); }
+  .btn-primary { background: var(--cinnabar); color: #f5ece0; }
+  .btn-primary:hover, .btn-primary:focus { background: var(--cinnabar-hi); color: #fff; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--paper); border: 1.5px solid var(--paper-dim); }
+  .btn-ghost:hover, .btn-ghost:focus { border-color: var(--gold); color: var(--gold); }
+  .btn svg { width: 20px; height: 20px; flex: 0 0 auto; }
+
+  .ver-note { margin-top: 18px; font-size: 14px; color: var(--paper-dim); }
+  .ver-note strong { color: var(--gold); font-weight: 600; }
+
+  /* ===== 区块 ===== */
+  section { padding: 56px 0; }
+  section.alt { background: var(--ink-2); border-top: 1px solid rgba(201,168,106,.14); border-bottom: 1px solid rgba(201,168,106,.14); }
+  h2.sec-title { font-size: clamp(26px, 4.6vw, 34px); letter-spacing: 3px; margin-bottom: 8px; }
+  .sec-kicker { color: var(--cinnabar-hi); font-size: 14px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 6px; }
+  .sec-desc { color: var(--paper-dim); margin-bottom: 32px; max-width: 640px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--ink-3); border: 1px solid rgba(201,168,106,.16);
+    border-radius: 8px; padding: 24px 22px;
+  }
+  .card h3 { color: var(--gold); font-size: 19px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+  .card p { color: var(--paper-dim); font-size: 15px; }
+  .card .ico { width: 26px; height: 26px; flex: 0 0 26px; color: var(--cinnabar-hi); }
+  .card .ico svg { width: 26px; height: 26px; }
+
+  ul.plain { list-style: none; }
+  ul.plain li { padding: 6px 0 6px 26px; position: relative; color: var(--paper-dim); font-size: 15px; }
+  ul.plain li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 8px; height: 8px; background: var(--cinnabar); border-radius: 1px; transform: rotate(45deg); }
+
+  /* ===== 下载区 ===== */
+  .dl-block {
+    background: linear-gradient(160deg, var(--ink-3) 0%, var(--ink-2) 100%);
+    border: 1px solid rgba(201,168,106,.28);
+    border-radius: 10px; padding: 36px 32px;
+  }
+  .dl-block h3 { font-size: 24px; letter-spacing: 2px; }
+  .dl-rows { margin: 22px 0; display: grid; gap: 12px; }
+  .dl-row { display: flex; gap: 12px; align-items: baseline; color: var(--paper-dim); font-size: 15px; }
+  .dl-row b { color: var(--paper); font-weight: 600; min-width: 92px; flex: 0 0 92px; }
+  .dl-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .dl-links a { padding: 12px 18px; border: 1px solid rgba(201,168,106,.4); border-radius: 6px; text-decoration: none; color: var(--paper); font-size: 15px; }
+  .dl-links a:hover, .dl-links a:focus { background: rgba(201,168,106,.12); color: var(--gold); }
+  .note { margin-top: 16px; font-size: 14px; color: var(--paper-dim); }
+  .note strong { color: var(--gold); }
+
+  /* ===== 页脚 ===== */
+  footer { border-top: 1px solid rgba(201,168,106,.2); padding: 40px 0 48px; color: var(--paper-dim); font-size: 14px; }
+  .foot-grid { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start; }
+  .foot-brand { display: flex; align-items: center; gap: 10px; font-family: "Noto Serif SC", "SimSun", serif; font-weight: 700; font-size: 16px; color: var(--paper); }
+  .foot-info { margin-top: 6px; }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .hero { padding: 52px 0 48px; }
+    .btn { width: 100%; justify-content: center; }
+    .dl-block { padding: 26px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <div class="brand"><span class="seal" aria-hidden="true">玄</span>玄盟风云</div>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#intro">游戏介绍</a>
+      <a href="#features">特色</a>
+      <a href="#update">更新说明</a>
+      <a href="#download">下载</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="seal-lg" aria-hidden="true">玄</div>
+      <h1 id="hero-title">玄盟风云</h1>
+      <p class="sub">语音修仙武侠文字网游</p>
+      <p class="tagline">
+        全程语音播报，读屏无障碍适配。修仙问道、比武竞技、公会联盟、交易交友——
+        一个用耳朵就能畅游的江湖。
+      </p>
+      <p class="meta" id="ver-hero">最新版本 v1.4.2 · 安卓版 · 约 26MB · 云端存档</p>
+      <div class="dl-bar">
+        <a id="dl-main" class="btn btn-primary" href="https://gh-proxy.com/https://github.com/XuanMengGame/xuanmeng-release/releases/download/v1.4.2/app-release.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          下载安卓版 APK
+        </a>
+        <a class="btn btn-ghost" href="#download">查看下载与安装说明</a>
+      </div>
+      <p class="ver-note" id="ver-note">主下载走国内加速通道；若下载失败，见下方备用链接。</p>
+    </div>
+  </section>
+
+  <!-- ===== 游戏介绍 ===== -->
+  <section id="intro" aria-labelledby="intro-title">
+    <div class="wrap">
+      <p class="sec-kicker">About</p>
+      <h2 class="sec-title" id="intro-title">游戏介绍</h2>
+      <p class="sec-desc">
+        《玄盟风云》是一款专为无障碍体验打造的修仙武侠文字网游。游戏以语音播报为核心交互，
+        界面全部适配读屏软件，视障与明眼玩家都能顺畅畅玩同一个江湖。
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.8L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-1.2z"/></svg></span>修仙问道</h3>
+          <p>五行功法、境界突破、渡劫飞升。修炼之路步步有声，每一次突破都有清晰语音反馈。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>比武竞技</h3>
+          <p>全服比武、跨服争锋。无人匹配时自动进入人机对战，随时开打，永不等场。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>公会联盟</h3>
+          <p>创建或加入玄盟，招募同道、并肩作战。公会事务全程语音化，管理不费力。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></span>交易商城</h3>
+          <p>特权商店、道具交易，长按自定义数量，购物全程语音提示，明明白白。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></span>聊天交友</h3>
+          <p>全服语音聊天、好友系统、邮件往来。江湖不孤，处处有回响。</p>
+        </div>
+        <div class="card">
+          <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5"/><polyline points="23 13 19 9 15 13"/><path d="M15 17v4"/><path d="M11 21h8"/></svg></span>云端存档</h3>
+          <p>角色数据云端保存，换机不丢档。服务器自动备份，账号数据安全有保障。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 特色 ===== -->
+  <section id="features" class="alt" aria-labelledby="features-title">
+    <div class="wrap">
+      <p class="sec-kicker">Features</p>
+      <h2 class="sec-title" id="features-title">特色亮点</h2>
+      <p class="sec-desc">为无障碍而生，为稳定而建。</p>
+      <ul class="plain">
+        <li>全程语音播报：登录、修炼、战斗、商城、更新，每一步都有清晰语音反馈，无需盯着屏幕。</li>
+        <li>读屏全面适配：界面元素语义化，支持 TalkBack 等读屏软件流畅操作。</li>
+        <li>轻量秒装：安装包约 26MB，低配置手机也能流畅运行。</li>
+        <li>更新更快：新版采用补丁热更机制，小更新只需下载几百 KB，几秒完成。</li>
+        <li>账号安全：注册登录流程完善，数据云端留存，不依赖本地文件。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 更新说明 ===== -->
+  <section id="update" aria-labelledby="update-title">
+    <div class="wrap">
+      <p class="sec-kicker">Update</p>
+      <h2 class="sec-title" id="update-title">更新说明</h2>
+      <div class="dl-block">
+        <h3 id="ver-update">v1.4.2</h3>
+        <ul class="plain" style="margin-top:12px;">
+          <li>修复补丁热更机制：补丁状态持久化保存，下载后自动重启生效，不再重复下载。</li>
+          <li>崩溃自动回滚：补丁异常时自动还原，保证游戏正常进入。</li>
+          <li>优化服务器连接与更新清单下发，玩家可稳定收到版本更新提示。</li>
+        </ul>
+        <p class="note" style="margin-top:14px;">小功能与修复将优先通过补丁方式推送，几秒即可完成更新。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 下载 ===== -->
+  <section id="download" class="alt" aria-labelledby="download-title">
+    <div class="wrap">
+      <p class="sec-kicker">Download</p>
+      <h2 class="sec-title" id="download-title">下载游戏</h2>
+      <p class="sec-desc">安卓版安装包，下载后点击文件即可安装。</p>
+
+      <div class="dl-block">
+        <h3>玄盟风云 <span id="ver-dl">v1.4.2</span>（安卓版）</h3>
+        <div class="dl-rows">
+          <div class="dl-row"><b>版本</b><span id="ver-dl-row">v1.4.2</span></div>
+          <div class="dl-row"><b>大小</b>约 26MB</div>
+          <div class="dl-row"><b>系统</b>Android 7.0 及以上</div>
+          <div class="dl-row"><b>更新</b>补丁热更，小更新仅几百 KB</div>
+        </div>
+        <a id="dl-main2" class="btn btn-primary" href="https://gh-proxy.com/https://github.com/XuanMengGame/xuanmeng-release/releases/download/v1.4.2/app-release.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          立即下载 APK
+        </a>
+        <p class="note">下载走国内加速通道；如果加速通道下载失败，请使用下方备用链接：</p>
+        <div class="dl-links">
+          <a id="dl-backup" href="https://github.com/XuanMengGame/xuanmeng-release/releases/download/v1.4.2/app-release.apk">备用下载：GitHub 直链</a>
+        </div>
+        <p class="note" id="ver-install"><strong>安装提示：</strong>若手机提示“未知来源应用”，请在设置中允许安装即可；安装前请确认下载的是 v1.4.2 版本安装包。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand"><span class="seal" aria-hidden="true">玄</span>玄盟风云</div>
+      <p class="foot-info">语音修仙武侠文字网游 · 无障碍友好 · 云端存档</p>
+    </div>
+    <div>
+      <p>数据安全：玩家账号与角色数据存储于云端服务器，定期自动备份。</p>
+      <p id="ver-foot">官网当前版本：v1.4.2 · 如有新版本请以游戏内更新提示为准。</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* 官网实时同步：每次打开自动读取最新发布版本，更新版本号与下载链接。
+   玩家在页面上只看到“下载安卓版 APK”按钮，看不到任何仓库信息。 */
+(function () {
+  var API = "https://api.github.com/repos/XuanMengGame/xuanmeng-release/releases/latest";
+  var GH = "https://github.com/XuanMengGame/xuanmeng-release/releases/download/";
+  var PROXY = "https://gh-proxy.com/";
+  function setText(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+  function setHref(id, v) { var el = document.getElementById(id); if (el) el.setAttribute("href", v); }
+  fetch(API, { headers: { "Accept": "application/vnd.github+json" } })
+    .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+    .then(function (rel) {
+      var tag = rel.tag_name || "";
+      var apk = null;
+      (rel.assets || []).forEach(function (a) {
+        if (/app-release\.apk$/.test(a.name) && a.browser_download_url) apk = a.browser_download_url;
+      });
+      if (!tag || !apk) return;
+      var dl = PROXY + apk;
+      setText("ver-hero", "最新版本 " + tag + " · 安卓版 · 约 26MB · 云端存档");
+      setText("ver-update", tag);
+      setText("ver-dl", tag);
+      setText("ver-dl-row", tag);
+      setText("ver-install", "若手机提示“未知来源应用”，请在设置中允许安装即可；安装前请确认下载的是 " + tag + " 版本安装包。");
+      setText("ver-foot", "官网当前版本：" + tag + " · 如有新版本请以游戏内更新提示为准。");
+      setHref("dl-main", dl);
+      setHref("dl-main2", dl);
+      setHref("dl-backup", apk);
+    })
+    .catch(function () { /* 拉取失败时保留页面默认的 v1.4.2 下载信息 */ });
+})();
+</script>
+</body>
+</html>
