@@ -7,10 +7,10 @@
   "notice": "v1.4.7 修复：更新下载失败与闪退问题。"
  },
  "test": {
-  "updateId": "v1.4.20",
-  "apkVersionCode": 160,
-  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.20.zip",
+  "updateId": "v1.4.21",
+  "apkVersionCode": 161,
+  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.21.zip",
   "force": true,
-  "notice": "v1.4.20 新增：设置-关于游戏（开发信息+测试甜心果果+三个群入口）。"
+  "notice": "v1.4.21 修复：下载进度播报恢复正常（抢占式播报）；取消下载更新音效。"
  }
 }
