@@ -7,10 +7,10 @@
   "notice": "v1.4.7 修复：更新下载失败与闪退问题。"
  },
  "test": {
-  "updateId": "v1.4.17",
-  "apkVersionCode": 157,
-  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.17.zip",
+  "updateId": "v1.4.18",
+  "apkVersionCode": 158,
+  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.18.zip",
   "force": true,
-  "notice": "v1.4.17 新增：设置-关于游戏（加入官方群+梦幻乐园官方群）。"
+  "notice": "v1.4.18 新增：设置-关于游戏（官方群+梦幻乐园官方群+推荐游戏群三个群入口）。"
  }
 }
