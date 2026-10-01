@@ -1,16 +1,9 @@
 {
  "release": {
-  "updateId": "v1.4.7",
-  "apkVersionCode": 147,
-  "url": "https://github.com/XuanMengGame/xuanmeng-release/releases/download/v1.4.7/app-release.apk",
-  "force": true,
-  "notice": "v1.4.7 修复：更新下载失败与闪退问题。"
- },
- "test": {
-  "updateId": "v1.4.21",
-  "apkVersionCode": 161,
-  "url": "https://codeload.github.com/XuanMengGame/XuanMengGame.github.io/zip/refs/heads/main?filename=v1.4.21.zip",
-  "force": true,
-  "notice": "v1.4.21 修复：下载进度播报恢复正常（抢占式播报）；取消下载更新音效。"
+  "updateId": "2.0",
+  "apkVersionCode": 220,
+  "url": "https://github.com/XuanMengGame/xuanmeng-release/releases/download/v2.0/xuanmeng_2.0_20261001.apk",
+  "force": false,
+  "notice": "v2.0：内置毫秒级离线语音（中文女声），修复多音字读音，登录界面音乐更新，语速上限优化。"
  }
 }
